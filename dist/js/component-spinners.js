@@ -31,7 +31,7 @@
       } else {
         $(self).html(text_spinner);
       };
-      $(self).addClass('disabled');
+      $(self).attr('disabled', true).addClass('disabled');
     }
     if (action == 'stop') {
       $(self).html($(self).attr('data-btn-text'));
