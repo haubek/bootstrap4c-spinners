@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Example</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="dist/css/component-spinners.css" rel="stylesheet">
+</head>
+<body class="h-100">
+  <div class="container h-100">
+    <div class="d-flex align-items-start flex-column h-100">
+      <div class="w-100 m-auto py-5">
+
+<section class="mb-5">
+  <legend>Button <code>tag</code></legend>
+  <button type="button" class="btn btn-secondary btn-spinner btn-spinner-example">Button</button>
+  <a href="#" class="btn btn-secondary btn-spinner btn-spinner-example">Link</a>
+</section>
+
+<section class="mb-5">
+  <legend>Button <code>types</code></legend>
+  <button type="button" class="btn btn-secondary btn-spinner btn-spinner-example" data-spinner-type="grow">Grow</button>
+  <button type="button" class="btn btn-secondary btn-spinner btn-spinner-example" data-spinner-text="Saving...">Text</button>
+</section>
+
+<section class="mb-5">
+  <legend>Button <code>sizes</code></legend>
+  <button type="button" class="btn btn-secondary btn-lg">
+    <span class="spinner-border spinner-border-lg" role="status" aria-hidden="true"></span>
+  </button>
+
+  <button type="button" class="btn btn-secondary btn-lg btn-spinner btn-spinner-example" data-spinner-type="" data-spinner-text="Saving...">Save</button>
+  <button type="button" class="btn btn-secondary btn-spinner btn-spinner-example" data-spinner-type="" data-spinner-text="Saving...">Save</button>
+  <button type="button" class="btn btn-secondary btn-sm btn-spinner btn-spinner-example" data-spinner-type="" data-spinner-text="Saving...">Save</button>
+</section>
+
+<section class="mb-5">
+  <legend>Button <code>markup</code></legend>
+  <button type="button" class="btn btn-secondary" disabled>
+    <span class="spinner-border" role="status" aria-hidden="true"></span>
+    <span class="sr-only">Loading...</span>
+  </button>
+  <button type="button" class="btn btn-secondary" disabled>
+    <span class="spinner-border" role="status" aria-hidden="true"></span>
+    <span class="ml-1">Loading...</span>
+  </button>
+  <div class="clearfix my-1"></div>
+  <button type="button" class="btn btn-secondary" disabled>
+    <span class="spinner-grow" role="status" aria-hidden="true"></span>
+    <span class="sr-only">Loading...</span>
+  </button>
+  <button type="button" class="btn btn-secondary" disabled>
+    <span class="spinner-grow" role="status" aria-hidden="true"></span>
+    <span class="ml-1">Loading...</span>
+  </button>
+</section>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="dist/js/component-spinners.js"></script>
+  <script type="text/javascript">
+    $('.btn-spinner-example').click(function() {
+      var btn = $(this);
+      $(btn).buttonLoader('start');
+      setTimeout(function() {
+        $(btn).buttonLoader('stop');
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
